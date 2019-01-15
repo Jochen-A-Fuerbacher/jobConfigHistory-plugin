@@ -206,7 +206,6 @@ public abstract class JobConfigHistoryBaseAction implements Action {
 			List<Delta> deltasToBeRemovedAfterTheMainLoop = new LinkedList<Delta>();
 			for (Delta delta : patch.getDeltas()) {
 			    // Modify both deltas and save the changes.
-                System.out.println("-----delta" + delta);
 				List<String> originalLines = Lists.newArrayList((List<String>) delta.getOriginal().getLines());
 				List<String> revisedLines = Lists.newArrayList((List<String>) delta.getRevised().getLines());
 
@@ -238,7 +237,6 @@ public abstract class JobConfigHistoryBaseAction implements Action {
 					    String originalLine = originalLines.get(line);
 					    String revisedLine = revisedLines.get(line);
                         String diff = StringUtils.difference(originalLine, revisedLine);
-                        System.out.println("--Diff: " + diff + " matches? " + diff.matches(ignoredDiffPattern));
 						// both lines are non-empty
 						if (originalLine.matches(ignoredLinesPattern)
 								&& revisedLine.matches(ignoredLinesPattern)
