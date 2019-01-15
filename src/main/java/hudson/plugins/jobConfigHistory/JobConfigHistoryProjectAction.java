@@ -507,8 +507,9 @@ public class JobConfigHistoryProjectAction extends JobConfigHistoryBaseAction {
 	 * Get the current request's 'showVersionDiffs'-parameter. If there is none, "True" is returned.
 	 * 
 	 * @return 
-	 * 		<code>true</code> if the current request has set this parameter to true or not at all.
-	 * 		<code>false</code> else
+	 * 		<b>true</b> if the current request has set this parameter to true or not at all.
+	 *		<br>
+	 * 		<b>false</b> else
 	 */
 	public String getShowVersionDiffs() {
 		String showVersionDiffs = (String) (this.getRequestParameter("showVersionDiffs"));
